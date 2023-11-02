@@ -7,19 +7,22 @@
             <img src='{{image}}' width="100%" height="300" alt="image">
             <div class="card-body">
               <p class="card-text fw-bold">{{title}}.</p>
-              <div class="d-flex justify-content-end align-items-center">
-              
+              <div class="d-flex justify-content-between align-items-center">
+              <p class="p-0 m-0">{{formatDate createdAt}}</p>
                 <small class="text-body-secondary">{{price}}.00$</small>
               </div>
             </div>
            
             <div class="card-footer">
                 <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-  <button type="button" class="btn btn-danger">View</button>
+  <a type="button" class="btn btn-danger" href="/product/{{_id}}">View</a>
    {{#if @root.token}}
 {{#ifequal user @root.userId}}
-  <button type="button" class="btn btn-warning">Edit</button>
-  <button type="button" class="btn btn-success">Delete</button>
+  <a type="button" class="btn btn-warning" href="/edit-product/{{_id}}">Edit</a>
+  <form action="/delete-product/{{_id}}" method="post">
+  <button type="submit" class="btn btn-success">Delete</button>
+
+  </form>
 {{/ifequal}}
   {{/if}}
 </div>
