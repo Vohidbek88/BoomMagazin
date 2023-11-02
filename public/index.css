@@ -1,0 +1,26 @@
+.dark-theme{
+    background-color: black;
+    color: white;
+}
+.white-theme{
+    background-color: white;
+    color: black;
+}
+.avatar{
+   
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: brown;
+    border-radius: 50%;
+    color: white;
+    font-weight: bolder;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.avatar p{
+    padding: 0;
+    margin: 0;
+}

@@ -1,0 +1,42 @@
+<div class="d-flex flex-column flex-md-row align-items-center pb-3 pt-3 mb-4 border-bottom">
+      <a href="/" class="d-flex align-items-center link-body-emphasis text-decoration-none">
+        <span class="fs-4">Boom shop</span>
+      </a>
+
+      <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+        {{#if isProduct}}
+        <a class="me-3 py-2 link-body-emphasis" href="/products">Products</a>
+        {{else}}
+        <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="/products">Products</a>
+        {{/if}}
+
+        {{#if isAdd}}
+        <a class="me-3 py-2 link-body-emphasis" href="/add">Add</a>
+        {{else}}
+        <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="/add">Add</a>
+        {{/if}}
+       <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+        {{#if token}}
+<button class="btn btn-danger">
+  <a class="text-black text-decoration-none" href="/logout">Logout</a>
+</button>
+        {{else}}
+ <button type="button" class="btn btn-success">
+    {{#if isLogin}}
+    <a class="text-black text-decoration-none " href="/login">Login</a>
+    {{else}}
+    <a class="text-light text-decoration-none" href="/login">Login</a>
+    {{/if}}
+  </button>
+  <button type="button" class="btn btn-warning">
+    {{#if isRegister}}
+    <a class="text-black text-decoration-none" href="/register">Register</a>
+    {{else}}
+    <a class="text-light text-decoration-none" href="/register">Register</a>
+    {{/if}}
+  </button>
+        {{/if}}
+ 
+</div>
+      </nav>
+    </div>
